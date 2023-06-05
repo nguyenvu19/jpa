@@ -2,7 +2,7 @@ package com.nguyenvu.demojpa.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "users")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

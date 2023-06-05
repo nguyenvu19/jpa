@@ -1,5 +1,6 @@
 package com.nguyenvu.demojpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -16,6 +17,7 @@ public class RoleEntity {
 
 //  mappedBy nhận vào tên biến bên Entity map khóa ngoại
     @OneToMany(mappedBy = "role")
+    @JsonIgnore
     private Set<UserEntity> users;
 
     public int getId() {
